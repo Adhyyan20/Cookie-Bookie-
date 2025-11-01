@@ -1,0 +1,69 @@
+🧩 Step 1: Create a GitHub repository
+
+Go to https://github.com/new
+
+Give it a name — e.g. cookie-bookie
+
+Don’t check “Add README”, “Add .gitignore”, or “Add license” (you’ll do that locally)
+
+Click Create repository
+
+You’ll now see a page with a few command-line instructions — we’ll go through those below 👇
+
+🧠 Step 2: Initialize Git in your local folder
+
+Open your terminal inside your project folder (where your code will be):
+
+cd path/to/your/cookie-bookie
+
+
+Then run:
+
+git init
+
+
+✅ This creates a hidden .git folder and starts tracking your project.
+
+🧾 Step 3: Add your files and make your first commit
+git add .
+git commit -m "Initial commit: setup Cookie-Bookie project"
+
+🌐 Step 4: Connect your local folder to the GitHub repo
+
+You’ll find your GitHub repo URL — it will look like:
+
+👉 For HTTPS:
+
+git remote add origin https://github.com/<your-username>/cookie-bookie.git
+
+
+👉 Or for SSH (if you’ve set up SSH keys):
+
+git remote add origin git@github.com:<your-username>/cookie-bookie.git
+
+🚀 Step 5: Push your local code to GitHub
+git branch -M main      # Rename master to main (GitHub uses main by default)
+git push -u origin main
+
+
+✅ Your code is now live on GitHub!
+
+💡 (Optional) Step 6: Verify Connection
+
+To confirm your repo is linked properly:
+
+git remote -v
+
+
+You should see:
+
+origin  https://github.com/<your-username>/cookie-bookie.git (fetch)
+origin  https://github.com/<your-username>/cookie-bookie.git (push)
+
+🎉 Done!
+
+Now whenever you make changes:
+
+git add .
+git commit -m "Describe what you changed"
+git push

@@ -22,5 +22,44 @@
         </div>
     </header>
 
+
+    <main>
+        <div class="wrap">
+            <!-- Form Panel -->
+             <section class="panel">
+                <h2 id="formTitle">Add New Recipe</h2>
+                <div class="body">
+                    <form autocomplete="off" class="recipeForm">
+                        <input type="hidden" id="rid">
+                        <div class="row">
+                            <label for="title">Title</label>
+                            <input type="text" id="title" placeholder="e.g, Chewy Choco Chip Cookies" required>
+                            <div class="hint">This is the recipe name users will see.</div>
+                        </div>
+                        <div class="row">
+                            <label for="image">Image URL</label>
+                            <input type="text" id="image" placeholder="Paste an image URL">
+                            <div class="hint">Leave Blank to use a Cookie illustration.</div>
+                        </div>
+                        <div class="row">
+                            <label for="ingredients">Ingreadients</label>
+                            <textarea id="ingredients" placeholder="One per line, or comma-seperated" required></textarea>
+                        </div>
+                        <div class="row">
+                            <label for="steps">Mehtos / Steps</label>
+                            <textarea id="steps" placeholder="Write steps here..." required></textarea>
+                        </div>
+                        <div class="actions">
+                            <button type="submit" id="submitBtn" class="btn primary">Add Recipe</button>
+                            <button type="button" id="cancelEditBtn" class="btn ghost" style="display: none;">Cancel Edit</button>\
+                            <span id="formStatus" class="status"></span>
+                        </div>
+                    </form>
+                </div>
+             </section>
+
+        </div>
+    </main>
+
 </body>
 </html>

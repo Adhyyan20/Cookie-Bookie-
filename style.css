@@ -86,3 +86,24 @@ textarea{ min-height:90px; }
 .status{
   font-size:13px; color:var(--muted);
 }
+
+/* List & Cards */
+.toolbar{
+  display:flex; gap:10px; align-items:center; justify-content:space-between; padding:12px 16px; border-bottom:1px solid var(--border);
+  flex-wrap:wrap;
+}
+.count{ font-size:13px; color:var(--muted) }
+.grid{
+  display:grid; gap:14px; padding:16px;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+}
+.card{
+  background: linear-gradient(180deg, #202128 0%, #1a1b22 100%);
+  border:1px solid var(--border); border-radius: 12px; overflow:hidden; display:flex; flex-direction:column;
+  transition: transform .12s ease;
+}
+.card:hover{ transform: translateY(-2px) }
+.thumb{
+  height:150px; display:grid; place-items:center; color:#2a1b00; font-size:42px; user-select:none;
+  background: radial-gradient(100% 100% at 20% 20%, #ffe6a6 0%, #f5b74a 65%, #b87b19 100%);
+}

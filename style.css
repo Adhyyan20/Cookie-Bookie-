@@ -53,3 +53,13 @@ header{
   padding:12px 14px; border-radius:10px; border:1px solid var(--border);
   background: var(--card); color:var(--text); cursor:pointer;
 }
+
+/* Panels */
+.panel{
+  background: linear-gradient(180deg, #191a20 0%, #15161b 100%);
+  border:1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow);
+}
+.panel h2{
+  margin:0; padding:16px 18px; border-bottom:1px solid var(--border); font-size:18px;
+}
+.panel .body{ padding:16px; }

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cookie Bookie | Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="wrap nav">
+            <div class="brand">
+                <div class="logo">🍪</div>
+                <div>Cookie Bookie</div>
+            </div>
+            <div class="search">
+                <input id="searchInput" type="text" placeholder="Search recipes by title or ingredients..." />
+                <button id="clearSearchBtn" class="btn">Clear</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="wrap">
+            <!-- Form Panel -->
+            <section class="panel">
+                <h2 id="formTitle">Add New Recipe</h2>
+                <div class="body">
+                    <form id="recipeForm" autocomplete="off">
+                        <input type="hidden" id="rid" />
+                        <div class="row">
+                            <label for="title">Title</label>
+                            <input id="title" type="text" placeholder="e.g., Chewy Choco Chip Cookies" required />
+                            <div class="hint">This is the recipe name users will see.</div>
+                        </div>
+                        <div class="row">
+                            <label for="image">Image URL (optional)</label>
+                            <input id="image" type="text" placeholder="Paste an image URL (jpg, png, webp)" />
+                            <div class="hint">Leave blank to use a cookie illustration.</div>
+                        </div>
+                        <div class="row">
+                            <label for="ingredients">Ingredients</label>
+                            <textarea id="ingredients" placeholder="One per line, or comma-separated"
+                                required></textarea>
+                        </div>
+                        <div class="row">
+                            <label for="steps">Method / Steps</label>
+                            <textarea id="steps" placeholder="Write steps here..." required></textarea>
+                        </div>
+                        <div class="actions">
+                            <button type="submit" id="submitBtn" class="btn primary">Add Recipe</button>
+                            <button type="button" id="cancelEditBtn" class="btn ghost" style="display:none">Cancel
+                                Edit</button>
+                            <span id="formStatus" class="status"></span>
+                        </div>
+                    </form>
+                </div>
+            </section>
+
+            <!-- List Panel -->
+            <section class="panel" id="listPanel">
+                <div class="toolbar">
+                    <div class="count" id="countLabel">0 recipes</div>
+                    <div class="actions">
+                        <button id="seedBtn" class="btn">Seed Examples</button>
+                        <button id="clearAllBtn" class="btn danger">Clear All</button>
+                    </div>
+                </div>
+                <div id="list" class="grid"></div>
+                <div id="empty" class="empty" style="display:none">No recipes yet. Add your first delicious recipe on
+                    the left.</div>
+            </section>
+        </div>
+    </main>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+    <script src="script.js" defer></script>
+</body>
+
+</html>

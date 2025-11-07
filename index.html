@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cookie Bookie | Home</title>
+    <title>Cookie Bookie | Landing</title>
     <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Save, share and discover cookie recipes with Cookie Bookie." />
 </head>
 
 <body>
@@ -15,69 +16,86 @@
                 <div class="logo">🍪</div>
                 <div>Cookie Bookie</div>
             </div>
-            <div class="search">
-                <input id="searchInput" type="text" placeholder="Search recipes by title or ingredients..." />
-                <button id="clearSearchBtn" class="btn">Clear</button>
-            </div>
+            <nav class="c">
+                <a href="mainPage.html">Home</a>
+                <a href="#features">Features</a>
+                <a href="#about">About</a>
+                <!-- <a href="index.html" class="btn primary">Add recipe</a> -->
+            </nav>
         </div>
     </header>
 
     <main>
-        <div class="wrap">
-            <!-- Form Panel -->
-            <section class="panel">
-                <h2 id="formTitle">Add New Recipe</h2>
-                <div class="body">
-                    <form id="recipeForm" autocomplete="off">
-                        <input type="hidden" id="rid" />
-                        <div class="row">
-                            <label for="title">Title</label>
-                            <input id="title" type="text" placeholder="e.g., Chewy Choco Chip Cookies" required />
-                            <div class="hint">This is the recipe name users will see.</div>
-                        </div>
-                        <div class="row">
-                            <label for="image">Image URL (optional)</label>
-                            <input id="image" type="text" placeholder="Paste an image URL (jpg, png, webp)" />
-                            <div class="hint">Leave blank to use a cookie illustration.</div>
-                        </div>
-                        <div class="row">
-                            <label for="ingredients">Ingredients</label>
-                            <textarea id="ingredients" placeholder="One per line, or comma-separated"
-                                required></textarea>
-                        </div>
-                        <div class="row">
-                            <label for="steps">Method / Steps</label>
-                            <textarea id="steps" placeholder="Write steps here..." required></textarea>
-                        </div>
-                        <div class="actions">
-                            <button type="submit" id="submitBtn" class="btn primary">Add Recipe</button>
-                            <button type="button" id="cancelEditBtn" class="btn ghost" style="display:none">Cancel
-                                Edit</button>
-                            <span id="formStatus" class="status"></span>
-                        </div>
-                    </form>
-                </div>
-            </section>
-
-            <!-- List Panel -->
-            <section class="panel" id="listPanel">
-                <div class="toolbar">
-                    <div class="count" id="countLabel">0 recipes</div>
-                    <div class="actions">
-                        <button id="seedBtn" class="btn">Seed Examples</button>
-                        <button id="clearAllBtn" class="btn danger">Clear All</button>
+        <section class="hero">
+            <div class="wrap hero-inner">
+                <div class="hero-text">
+                    <h1>Keep your favorite <br/> recipes in one sweet place</h1>
+                    <p>Save, search and share delicious cookie recipes.</p>
+                    <div class="hero-cta">
+                        <a href="mainPage.html" class="btn primary">
+                            <div class="hero-visual" aria-hidden="true">🍪</div>
+                            Add Recipes</a>
+                        <a href="#features" class="btn ghost">Learn More</a>
                     </div>
                 </div>
-                <div id="list" class="grid"></div>
-                <div id="empty" class="empty" style="display:none">No recipes yet. Add your first delicious recipe on
-                    the left.</div>
-            </section>
-        </div>
+            </div>
+        </section>
+
+        <section id="features" class="wrap features">
+            <h2 class="section-title">Features</h2>
+            <div class="cards">
+                <div class="card">
+                    <div class="card-icon">📚</div>
+                    <h3>Organize Recipes</h3>
+                    <p>Create and manage your recipes with images, ingredients and step-by-step instructions.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🔎</div>
+                    <h3>Smart Search</h3>
+                    <p>Find recipes quickly by title or ingredients. Perfect for last-minute baking plans.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🤝</div>
+                    <h3>Share & Discover</h3>
+                    <p>Share your favorite creations and discover tasty recipes from others in the community.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="wrap about">
+            <h2 class="section-title">About Cookie Bookie</h2>
+            <div class="about-body">
+                <div class="about-visual">
+                    <img style="border-radius: 20px;" src="/public/illustration.webp" alt="">
+                </div>
+                <div class="about-detail">
+                    <p>Cookie Bookie is a lightweight, privacy-first recipe manager built for cookie lovers. No accounts
+                    required — just add recipes locally and come back anytime from the same browser. We focus on a
+                    friendly interface and fast searching so you can spend more time baking and less time hunting for
+                    instructions.</p>
+                </div>
+            
+            </div>
+        </section>
     </main>
 
-    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <footer class="site-footer">
+        <div class="wrap footer-inner">
+            <div class="brand">
+                <div class="logo">🍪</div>
+                <div>Cookie Bookie</div>
+            </div>
+            <div class="footer-links">
+                <a href="index.html">Recipes</a>
+                <a href="#features">Features</a>
+                <a href="#about">About</a>
+            </div>
+            <div class="copyright">&copy; 2025 Cookie Bookie</div>
+        </div>
+    </footer>
 
-    <script src="script.js" defer></script>
 </body>
 
 </html>
